@@ -18,7 +18,7 @@ syntax enable
 set term=screen-256color
 set background=dark
 colorscheme xoria256
-hi Pmenu ctermbg=4
+" hi Pmenu ctermbg=4
 
 set ambiwidth=double
 set autoread
@@ -42,7 +42,7 @@ set fileformats=unix,dos
 "Tab
 set expandtab
 set smartindent
-set ts=2 sw=2 sts=2
+set ts=4 sw=4 sts=4
 
 "search
 set nohlsearch
