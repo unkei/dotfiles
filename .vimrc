@@ -1,3 +1,5 @@
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
 
 syntax enable
 
@@ -13,8 +15,6 @@ set showmode
 set showcmd
 set ruler
 set hlsearch
-
-call pathogen#runtime_append_all_bundles()
 
 "Force to re-enable since pathogen command needs to be run before the line. It's already done in system.
 filetype off
