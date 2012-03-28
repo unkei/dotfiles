@@ -1,0 +1,12 @@
+cd
+
+unzip ~/Dropbox/id_rsa.zip
+
+git clone git@github.com:unkei/dotfiles.git
+
+ln -s dotfiles/.bash_profile
+ln -s dotfiles/.vimrc
+
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+Launch vim, run :BundleInstall (or vim +BundleInstall +qall for CLI lovers)
