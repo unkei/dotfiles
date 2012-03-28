@@ -1,7 +1,11 @@
 # set locale to use utf8 in Japanese
 #export LANG=ja_JP.UTF-8
 
-alias ls='ls -FG --color'
+if [[ $OSTYPE = "darwin"* ]]; then
+    alias ls='ls -FG'
+else
+    alias ls='ls -F --color=auto'
+fi
 alias ll='ls -l'
 alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
