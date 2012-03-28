@@ -5,6 +5,7 @@ alias ls='ls -FG --color'
 alias ll='ls -l'
 alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
+alias shttpd='python -m SimpleHTTPServer'
 
 # qmake config to make Makefile or Xcode project
 #alias qmakeG='qmake -spec macx-g++'
