@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 set rtp+=~/.vim/bundle/vundle/ 
 call vundle#rc()
 
@@ -6,30 +9,57 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
+Bundle 'xoria256.vim'
 Bundle 'Shougo/neocomplcache'
 
+filetype plugin indent on
 syntax enable
 
-set tabstop=4
-set expandtab
-"set noexpandtab
+set term=screen-256color
+set background=dark
+colorscheme xoria256
+hi Pmenu ctermbg=4
 
+set ambiwidth=double
+set autoread
+set hidden
 set number
-set incsearch
+set showmatch
+set ttymouse=xterm2
+set wildmode=list:longest,list:full
+
+set directory-=.
+
+"backup
+set nobackup
+
+"encoding
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,iso-2022-jp,euc-jp,cp932
+set fileformats=unix,dos
+
+"Tab
+set expandtab
+set smartindent
+set ts=2 sw=2 sts=2
+
+"search
+set nohlsearch
 set ignorecase
-set autoindent
-set showmode
-set showcmd
-set ruler
-set hlsearch
+set smartcase
+set incsearch
+
+"statusline
+set laststatus=2
+
+"old settings
+"set showmode
+"set showcmd
+"set ruler
+"set hlsearch
 
 "Force to re-enable since pathogen command needs to be run before the line. It's already done in system.
-filetype off
-filetype plugin indent on
-
-autocmd FileType python setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
