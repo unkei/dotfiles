@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'xoria256.vim'
 Bundle 'Shougo/neocomplcache'
+Bundle 'taglist.vim'
 
 filetype plugin indent on
 syntax enable
