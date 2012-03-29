@@ -12,6 +12,9 @@ Bundle 'gmarik/vundle'
 Bundle 'xoria256.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'taglist.vim'
+Bundle 'Shougo/unite.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Shougo/vimshell.git'
 
 filetype plugin indent on
 syntax enable
@@ -46,13 +49,27 @@ set smartindent
 set ts=4 sw=4 sts=4
 
 "search
-set nohlsearch
+set hlsearch
 set ignorecase
 set smartcase
 set incsearch
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 "statusline
 set laststatus=2
+
+" highligh cursor line
+set cursorline
+" cursor line only in active windows
+augroup cch
+autocmd! cch
+autocmd WinLeave * set nocursorline
+autocmd WinEnter,BufRead * set cursorline
+augroup END
+
+hi clear CursorLine
+hi CursorLine gui=underline
+highlight CursorLine ctermbg=black guibg=black
 
 "old settings
 "set showmode
@@ -60,7 +77,8 @@ set laststatus=2
 "set ruler
 "set hlsearch
 
-"Force to re-enable since pathogen command needs to be run before the line. It's already done in system.
+" ctags path
+let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
