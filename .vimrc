@@ -15,6 +15,7 @@ Bundle 'taglist.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/vimshell.git'
+Bundle 'Shougo/vimproc.git'
 
 filetype plugin indent on
 syntax enable
@@ -70,6 +71,12 @@ augroup END
 hi clear CursorLine
 hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
+
+" CTRL-hjkl for window move
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
 
 "old settings
 "set showmode
@@ -153,4 +160,24 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+" Settings for Unite.vim
+nnoremap    [unite]   <Nop>
+nmap    f [unite]
+
+" show buffer without splitting
+nnoremap [unite]u  :<C-u>Unite -no-split<Space>
+
+" all in one
+nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
+" file list
+nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
+" buffer list
+nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
+" normal use
+nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
+" recent files
+nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
+" file list from the current directory of the current buffer
+nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
 
