@@ -16,6 +16,8 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/vimshell.git'
 Bundle 'Shougo/vimproc.git'
+Bundle 'mattn/zencoding-vim'
+
 
 filetype plugin indent on
 syntax enable
