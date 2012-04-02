@@ -11,13 +11,13 @@ Bundle 'gmarik/vundle'
 " My bundles
 Bundle 'xoria256.vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'taglist.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/vimshell.git'
 Bundle 'Shougo/vimproc.git'
 Bundle 'mattn/zencoding-vim'
-
+"Bundle 'taglist-plus'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 syntax enable
@@ -86,8 +86,18 @@ nnoremap <C-h> <C-w>h
 "set ruler
 "set hlsearch
 
-" ctags path
+" taglist settings
+" The following line was needed for ctags installed by brew. Made symbolic
+" link in /usr/bin instead and not needed. 
 "let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
+"let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function'
+let Tlist_WinWidth='auto'
+let Tlist_javascript_Hide_Extras=['type']
+
+" tagbar settings to use jsctags
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+    \ }
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0

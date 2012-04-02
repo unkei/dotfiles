@@ -31,6 +31,8 @@ alias shttpd='python -m SimpleHTTPServer'
 # add own bin dir
 export PATH=${PATH}:~/bin
 
+export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
+
 #export PATH=${PATH}:/Applications/gnuplot.app:/Applications/gnuplot.app/bin
 
 # compiler options for development on OpenGL and OpenCV
