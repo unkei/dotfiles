@@ -87,7 +87,7 @@ nnoremap <C-h> <C-w>h
 "set hlsearch
 
 " ctags path
-let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
+"let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
