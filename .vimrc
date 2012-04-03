@@ -16,7 +16,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Shougo/vimshell.git'
 Bundle 'Shougo/vimproc.git'
 Bundle 'mattn/zencoding-vim'
-"Bundle 'taglist-plus'
+Bundle 'int3/vim-taglist-plus'
 Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
