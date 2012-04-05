@@ -18,6 +18,14 @@ Bundle 'Shougo/vimproc.git'
 Bundle 'mattn/zencoding-vim'
 Bundle 'int3/vim-taglist-plus'
 Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
+
+Bundle 'othree/html5.vim'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'hokaccha/vim-html5validator'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 syntax enable
