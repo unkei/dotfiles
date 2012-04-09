@@ -202,3 +202,7 @@ nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " file list from the current directory of the current buffer
 nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
 
+" nerdcommenter
+let NERDSpaceDelims = 1
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
