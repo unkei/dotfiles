@@ -36,44 +36,22 @@ fi
 alias ll='ls -l'
 alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
-alias shttpd='python -m SimpleHTTPServer'
-
-# qmake config to make Makefile or Xcode project
-#alias qmakeG='qmake -spec macx-g++'
-#alias qmakeX='qmake -spec macx-xcode'
-
-#alias finder='open /System/Library/CoreServices/Finder.app'
-
-#export ANT_HOME=/usr/local/ant
-#export PATH=${PATH}:${ANT_HOME}/bin
-
-#export PATH=${PATH}:/usr/local/Trolltech/Qt-4.5.0-tp1/bin
-
-# export PATH=${PATH}:~/android-sdk-mac_x86-1.0_r1/tools
-#export PATH=${PATH}:/usr/local/android/tools
 
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
 
-export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
+export PATH=/usr/local/share/npm/bin:$PATH
+export NODE_PATH=/usr/local/lib/node
 
-#export PATH=${PATH}:/Applications/gnuplot.app:/Applications/gnuplot.app/bin
+# prompt
+autoload colors
+colors
+PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
+RPROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
 
-# compiler options for development on OpenGL and OpenCV
-#alias glcc='cc -framework OpenGL -framework GLUT -framework Foundation'
-#alias cvcc='c++ -I/opt/local/include/opencv/ -lcxcore -lcv -lhighgui -lcvaux -L/opt/local/lib'
+# rvm
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-# OpenOffice invisible mode. Use the command followed by macro to run
-
-#function ooffice () { /Applications/OpenOffice.org.app/Contents/MacOS/soffice.bin -invisible "macro:///Standard.MyConversions.SaveAsPDF($@)"; }
-
-##
-# Your previous /Users/unkei/.bash_profile file was backed up as /Users/unkei/.bash_profile.macports-saved_2011-01-15_at_13:22:42
-##
-
-# MacPorts Installer addition on 2011-01-15_at_13:22:42: adding an appropriate PATH variable for use with MacPorts.
-#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
