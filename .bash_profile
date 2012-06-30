@@ -28,8 +28,8 @@ alias shttpd='python -m SimpleHTTPServer'
 # export PATH=${PATH}:~/android-sdk-mac_x86-1.0_r1/tools
 #export PATH=${PATH}:/usr/local/android/tools
 
-# add own bin dir
-export PATH=${PATH}:~/bin
+# add own bin dir. prioritize /usr/local/bin for brew
+export PATH=~/bin:/usr/local/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 

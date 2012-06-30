@@ -26,6 +26,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'hokaccha/vim-html5validator'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
+Bundle 'hallettj/jslint.vim'
 
 filetype plugin indent on
 syntax enable
@@ -200,4 +201,9 @@ nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
 nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " file list from the current directory of the current buffer
 nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
+
+" nerdcommenter
+let NERDSpaceDelims = 1
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
 
