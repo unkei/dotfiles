@@ -42,7 +42,7 @@ alias shttpd='python -m SimpleHTTPServer'
 export PATH=~/bin:/usr/local/bin:$PATH
 
 export PATH=/usr/local/share/npm/bin:$PATH
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node_modules
 
 # prompt
 autoload colors
