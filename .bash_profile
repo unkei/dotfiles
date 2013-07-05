@@ -37,6 +37,7 @@ alias ll='ls -l'
 alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
 alias shttpd='python -m SimpleHTTPServer'
+alias vin='vim -c NERDTree'
 
 # qmake config to make Makefile or Xcode project
 #alias qmakeG='qmake -spec macx-g++'
@@ -54,6 +55,7 @@ alias shttpd='python -m SimpleHTTPServer'
 
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
+export PATH=$PATH:~/Development/adt-bundle-mac-x86_64-20130522/sdk/tools:~/Development/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
 
 export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 

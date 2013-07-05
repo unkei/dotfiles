@@ -107,6 +107,7 @@ let Tlist_javascript_Hide_Extras=['type']
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
     \ }
+nmap <F8> :TagbarToggle<CR>
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -206,4 +207,7 @@ nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
 let NERDSpaceDelims = 1
 nmap ,, <Plug>NERDCommenterToggle
 vmap ,, <Plug>NERDCommenterToggle
+
+" nerdtree
+nmap <F9> :NERDTreeToggle<CR>
 
