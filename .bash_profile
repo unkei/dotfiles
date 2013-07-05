@@ -50,12 +50,12 @@ alias vin='vim -c NERDTree'
 
 #export PATH=${PATH}:/usr/local/Trolltech/Qt-4.5.0-tp1/bin
 
-# export PATH=${PATH}:~/android-sdk-mac_x86-1.0_r1/tools
-#export PATH=${PATH}:/usr/local/android/tools
+# android sdk
+ANDROID_SDK=~/Development/android-sdk-mac_x86/sdk
+export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
 
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
-export PATH=$PATH:~/Development/adt-bundle-mac-x86_64-20130522/sdk/tools:~/Development/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
 
 export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 

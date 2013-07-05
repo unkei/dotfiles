@@ -42,8 +42,11 @@ alias vin='vim -c NERDTree'
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
 
+# android sdk
+ANDROID_SDK=~/Development/android-sdk-mac_x86/sdk
+export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
+
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=$PATH:~/Development/adt-bundle-mac-x86_64-20130522/sdk/tools:~/Development/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
 export NODE_PATH=/usr/local/lib/node_modules
 
 # prompt
