@@ -45,6 +45,7 @@ export PATH=~/bin:/usr/local/bin:$PATH
 # android sdk
 ANDROID_SDK=~/Development/android-sdk-mac_x86/sdk
 export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
+export NDKROOT=~/Development/android-ndk-r9c
 
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules

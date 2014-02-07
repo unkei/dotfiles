@@ -105,7 +105,7 @@ let Tlist_javascript_Hide_Extras=['type']
 
 " tagbar settings to use jsctags
 let g:tagbar_type_javascript = {
-    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+    \ 'ctagsbin' : '/usr/local/share/npm/bin/jsctags'
     \ }
 nmap <F8> :TagbarToggle<CR>
 
