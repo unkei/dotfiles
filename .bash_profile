@@ -53,6 +53,9 @@ alias vin='vim -c NERDTree'
 # android sdk
 ANDROID_SDK=~/Development/android-sdk-mac_x86/sdk
 export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
+export NDKROOT=~/Development/android-ndk-r9c
+export NDK_ROOT=${NDKROOT}
+export LD_LIBRARY_PATH=${ANDROID_SDK}/tools/lib:${LD_LIBRARY_PATH}
 
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
