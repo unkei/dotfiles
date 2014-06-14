@@ -67,6 +67,8 @@ set smartcase
 set incsearch
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
+set tags+=./tags
+
 "statusline
 set laststatus=2
 
