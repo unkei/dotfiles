@@ -27,6 +27,7 @@ Bundle 'hokaccha/vim-html5validator'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'hallettj/jslint.vim'
+Bundle 'toyamarinyon/vim-swift'
 
 filetype plugin indent on
 syntax enable
