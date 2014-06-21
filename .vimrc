@@ -31,6 +31,8 @@ Bundle 'toyamarinyon/vim-swift'
 
 filetype plugin indent on
 syntax enable
+ 
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 set term=screen-256color
 set background=dark

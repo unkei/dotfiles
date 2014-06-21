@@ -57,6 +57,11 @@ export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
 export NDKROOT=~/Development/android-ndk-r9d
 export NDK_ROOT=${NDKROOT}
 export LD_LIBRARY_PATH=${ANDROID_SDK}/tools/lib:${LD_LIBRARY_PATH}
+export ANDROID_SDK_ROOT=${ANDROID_SDK}
+
+# setting for test automation
+export ANDROID_HOME=${ANDROID_SDK}
+export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/add-ons
 
 # add own bin dir. prioritize /usr/local/bin for brew
 export PATH=~/bin:/usr/local/bin:$PATH
@@ -85,13 +90,8 @@ export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/unkei/Development/cocos2d-x-3.1.1/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=~/Development/cocos2d-x-3.1.1/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/unkei/Development/android-sdk-mac_x86/sdk
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/bin
