@@ -8,6 +8,6 @@ ln -s dotfiles/.bash_profile
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.vim
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git submodule init (for NeoBundle.vim in .vim/bundle/neobundle.vim)
+vim (to perform NeoBundleInstall)
 
-Launch vim, run :BundleInstall (or vim +BundleInstall +qall for CLI lovers)
