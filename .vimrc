@@ -20,7 +20,8 @@ NeoBundle 'Shougo/vimproc', {
 " My bundles
 NeoBundle 'xoria256.vim'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Rip-Rip/clang_complete'
+NeoBundle 'osyo-manga/vim-reunions'
+NeoBundle 'osyo-manga/vim-marching'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
@@ -220,35 +221,37 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 "
-" clang_complete.vim
+" vim_marching.vim
 "
-let g:clang_user_options = '-std=c++11 -stdlib=libc++'
+let g:marching_clang_command_option="-std=c++1y"
 
-if has('mac')
-    let g:clang_library_path = '/Library/Developer/CommandLineTools/usr/lib/'
-endif
+let g:marching_include_paths = filter(
+    \   split(glob('/usr/include/c++/*'), '\n') +
+    \   split(glob('/usr/include/*/c++/*'), '\n') +
+    \   split(glob('/usr/include/*/'), '\n'),
+    \   'isdirectory(v:val)')
+
+let g:marching_enable_neocomplete = 1
 
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
-let g:neocomplete#force_overwrite_completefunc = 1
-let g:neocomplete#force_omni_input_patterns.c =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+
 let g:neocomplete#force_omni_input_patterns.cpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.objc =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.objcpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+    \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
+" set updatetime=200
 
-let g:clang_periodic_quickfix = 1
-let g:clang_complete_copen = 1
-let g:clang_use_library = 1
+" no insertion of completion word in omini completion
+" imap <buffer> <C-x><C-o> <Plug>(marching_start_omni_complete)
+
+" omin completion after clearing cache
+" imap <buffer> <C-x><C-x><C-o> <Plug>(marching_force_start_omni_complete)
+
+" code completion on sync
+" let g:marching_backend = "sync_clang_command"
 "
-" clang_complete.vim
+" vim_marching.vim
 "
 
 
