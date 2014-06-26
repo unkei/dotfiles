@@ -9,19 +9,23 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+            \ 'build' : {
+            \     'windows' : 'make -f make_mingw32.mak',
+            \     'cygwin' : 'make -f make_cygwin.mak',
+            \     'mac' : 'make -f make_mac.mak',
+            \     'unix' : 'make -f make_unix.mak',
+            \    },
+            \ }
+
+NeoBundleLazy 'osyo-manga/vim-marching', {
+            \ 'depends' : ['Shougo/vimproc.vim', 'osyo-manga/vim-reunions'],
+            \ 'autoload' : {'filetypes' : ['c', 'cpp']}
+            \ }
 
 " My bundles
 NeoBundle 'xoria256.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'osyo-manga/vim-reunions'
-NeoBundle 'osyo-manga/vim-marching'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
@@ -223,13 +227,20 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "
 " vim_marching.vim
 "
+let g:marching_backend = "sync_clang_command"
+
+let g:marching_clang_command = "clang"
+
 let g:marching_clang_command_option="-std=c++1y"
 
-let g:marching_include_paths = filter(
-    \   split(glob('/usr/include/c++/*'), '\n') +
-    \   split(glob('/usr/include/*/c++/*'), '\n') +
-    \   split(glob('/usr/include/*/'), '\n'),
-    \   'isdirectory(v:val)')
+" let g:marching_include_paths = filter(
+    " \   split(glob('/usr/include/c++/*'), '\n') +
+    " \   split(glob('/usr/include/*/c++/*'), '\n') +
+    " \   split(glob('/usr/include/*/'), '\n'),
+    " \   'isdirectory(v:val)')
+let g:marching_include_paths = [
+            \ "/usr/include/c++/4.2.1/"
+            \ ]
 
 let g:marching_enable_neocomplete = 1
 
