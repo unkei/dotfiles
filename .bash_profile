@@ -90,7 +90,7 @@ export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=~/Development/cocos2d-x-3.1.1/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=~/Development/cocos2d-x-3.2/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x
