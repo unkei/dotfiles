@@ -38,7 +38,7 @@ alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
 alias shttpd='python -m SimpleHTTPServer'
 alias vin='vim -c NERDTree'
-alias swift='/Applications/Xcode6-Beta2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode6-Beta2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk'
+alias swift='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk'
 
 # qmake config to make Makefile or Xcode project
 #alias qmakeG='qmake -spec macx-g++'

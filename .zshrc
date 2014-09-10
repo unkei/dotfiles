@@ -38,7 +38,7 @@ alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
 alias shttpd='python -m SimpleHTTPServer'
 alias vin='vim -c NERDTree'
-alias swift='/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode6-Beta6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk'
+alias swift='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk'
 
 
 # add own bin dir. prioritize /usr/local/bin for brew
