@@ -59,6 +59,9 @@ export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 
+# brew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # prompt
 autoload colors
 colors
@@ -78,4 +81,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/bin
 export PATH=$ANT_ROOT:$PATH
+
+# Ruby
+eval "$(rbenv init -)"
 
