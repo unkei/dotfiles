@@ -70,6 +70,9 @@ export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 
 #export PATH=${PATH}:/Applications/gnuplot.app:/Applications/gnuplot.app/bin
 
+# brew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # compiler options for development on OpenGL and OpenCV
 #alias glcc='cc -framework OpenGL -framework GLUT -framework Foundation'
 #alias cvcc='c++ -I/opt/local/include/opencv/ -lcxcore -lcv -lhighgui -lcvaux -L/opt/local/lib'
@@ -96,3 +99,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/bin
 export PATH=$ANT_ROOT:$PATH
+
+# Ruby
+eval "$(rbenv init -)"
+
