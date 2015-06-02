@@ -38,7 +38,7 @@ alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
 alias shttpd='python -m SimpleHTTPServer'
 alias vin='vim -c NERDTree'
-alias swift='/Applications/Xcode6-Beta2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode6-Beta2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk'
+alias swift='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk'
 
 # qmake config to make Makefile or Xcode project
 #alias qmakeG='qmake -spec macx-g++'
@@ -90,7 +90,7 @@ export NODE_PATH=/usr/local/lib/node_modules/:/usr/local/lib/jsctags
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=~/Development/cocos2d-x-3.1.1/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=~/Development/cocos2d-x-3.2/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x

@@ -29,10 +29,15 @@ Bundle 'scrooloose/nerdtree'
 " Bundle 'hallettj/jslint.vim'
 Bundle 'toyamarinyon/vim-swift'
 
+Bundle 'plasticboy/vim-markdown'
+Bundle 'kannokanno/previm'
+Bundle 'tyru/open-browser.vim'
+
 filetype plugin indent on
 syntax enable
  
 autocmd BufNewFile,BufRead *.json set ft=javascript
+au BufRead,BufNewFile *.md set filetype=markdown
 
 set term=screen-256color
 set background=dark
@@ -87,6 +92,10 @@ augroup END
 hi clear CursorLine
 hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
+
+if has("gui_macvim") || has("gui_vimr")
+   set guifont=Monaco:h14
+endif
 
 " CTRL-hjkl for window move
 nnoremap <C-j> <C-w>j
