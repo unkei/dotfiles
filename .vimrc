@@ -33,6 +33,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'kannokanno/previm'
 Bundle 'tyru/open-browser.vim'
 
+Bundle 'kien/ctrlp.vim'
+
 filetype plugin indent on
 syntax enable
  
