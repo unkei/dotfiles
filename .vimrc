@@ -20,6 +20,8 @@ Bundle 'int3/vim-taglist-plus'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/command-t'
 
 Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
