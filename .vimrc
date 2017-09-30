@@ -36,6 +36,9 @@ Bundle 'kannokanno/previm'
 Bundle 'tyru/open-browser.vim'
 
 Bundle 'kien/ctrlp.vim'
+Bundle 'szw/vim-tags'
+
+Bundle 'Shougo/vinarise.vim'
 
 filetype plugin indent on
 syntax enable
@@ -240,4 +243,8 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll|o)$',
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
     \ }
+
+" vim-tags
+let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 

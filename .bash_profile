@@ -110,6 +110,16 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export ANT_ROOT=/usr/local/bin
 export PATH=$ANT_ROOT:$PATH
 
+export PATH=~/work/webrtc/depot_tools:"$PATH"
+
 # Ruby
 eval "$(rbenv init -)"
 
+
+# added by Anaconda2 2.5.0 installer
+export PATH="//anaconda/bin:$PATH"
+
+# Connect IQ SDK
+export PATH="$PATH:$HOME/Development/connectiq-sdk-mac-2.1.5/bin"
+
+eval $(/usr/libexec/path_helper -s)

@@ -85,3 +85,15 @@ export PATH=$ANT_ROOT:$PATH
 # Ruby
 eval "$(rbenv init -)"
 
+
+# added by Anaconda2 2.5.0 installer
+export PATH="//anaconda/bin:$PATH"
+
+# Connect IQ SDK
+export PATH="$PATH:$HOME/Development/connectiq-sdk-mac-2.1.5/bin"
+
+# jrogue
+# -11 is equal to 'ROGUEOPTS=passgo,color,idscrl'
+alias jrogue -11
+
+eval $(/usr/libexec/path_helper -s)
