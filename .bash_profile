@@ -1,5 +1,6 @@
 # set locale to use utf8 in Japanese
-#export LANG=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
+export LC_ALL=$LANG
 
 source $HOME/dotfiles/.git-completion.bash
 source $HOME/dotfiles/.git-prompt.sh
@@ -115,9 +116,10 @@ export PATH=~/work/webrtc/depot_tools:"$PATH"
 # Ruby
 eval "$(rbenv init -)"
 
-
-# added by Anaconda2 2.5.0 installer
-export PATH="//anaconda/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pipenv --completion)"
 
 # Connect IQ SDK
 export PATH="$PATH:$HOME/Development/connectiq-sdk-mac-2.1.5/bin"

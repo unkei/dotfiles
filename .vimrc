@@ -40,6 +40,14 @@ Bundle 'szw/vim-tags'
 
 Bundle 'Shougo/vinarise.vim'
 
+Bundle 'pangloss/vim-javascript'
+Bundle 'othree/yajs.vim'
+Bundle 'othree/es.next.syntax.vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
+" Bundle 'othree/html5.vim'
+Bundle 'maxmellon/vim-jsx-pretty'
+Bundle 'ternjs/tern_for_vim'
+
 filetype plugin indent on
 syntax enable
  
