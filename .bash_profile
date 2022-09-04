@@ -47,7 +47,8 @@ fi
 alias ll='ls -l'
 alias cd='CDBAK=`pwd`;cd'
 alias bcd='CDTMP=`pwd`;\cd $CDBAK;CDBAK=$CDTMP'
-alias shttpd='python -m SimpleHTTPServer'
+# alias shttpd='python -m SimpleHTTPServer'
+alias shttpd='python -m http.server'
 alias vin='vim -c NERDTree'
 alias swift='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk'
 
@@ -63,8 +64,8 @@ alias swift='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.
 #export PATH=${PATH}:/usr/local/Trolltech/Qt-4.5.0-tp1/bin
 
 # android sdk
-ANDROID_SDK=~/Development/android-sdk-mac_x86/sdk
-export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
+ANDROID_SDK=/opt/android/sdk
+export PATH=$PATH:${ANDROID_SDK}/tools:${ANDROID_SDK}/tools/bin:${ANDROID_SDK}/platform-tools
 export NDKROOT=~/Development/android-ndk-r9d
 export NDK_ROOT=${NDKROOT}
 export LD_LIBRARY_PATH=${ANDROID_SDK}/tools/lib:${LD_LIBRARY_PATH}
@@ -119,9 +120,16 @@ eval "$(rbenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pipenv --completion)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 
 # Connect IQ SDK
-export PATH="$PATH:$HOME/Development/connectiq-sdk-mac-2.1.5/bin"
+export PATH="$PATH:$HOME/Development/connectiq-sdk-mac-3.0.5-2018-11-20-1690028/bin"
 
-eval $(/usr/libexec/path_helper -s)
+# futter
+export PATH="$PATH:$HOME/Development/flutter/bin"
+
+# eval $(/usr/libexec/path_helper -s)
+export PATH="/usr/local/sbin:$PATH"
+
+. "$HOME/.cargo/env"
